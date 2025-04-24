@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.toolbar {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 10px 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 12px;
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+    max-width: 800px;
+}
+
+.toolbar img {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.toolbar img:hover {
+    background-color: #e3e3e3;
+    transform: scale(1.05);
+}
+
+.toolbar img.active {
+    background-color: #d0e6ff;
+    transform: scale(1.1);
+    box-shadow: 0 0 0 2px #3399ff50;
+}
+
+
+input[type="color"] {
+    margin-left: 5px;
+}
+
+.align-dropdown {
+    position: relative;
+}
+
+.align-options {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 8px 0;
+    z-index: 100;
+}
+
+.align-options button {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    text-align: left;
+    width: 100%;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.align-options button:hover {
+    background-color: #f0f0f0;
+}
+
+.align-dropdown.open .align-options {
+    display: block;
+}
+
+
+#paper {
+    width: 100%;
+    max-width: 800px;
+    min-height: 1000px;
+    margin-top: 30px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    outline: none;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #222;
+}
+
+
+.font-options {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    z-index: 10;
+    
+  }
+  
+  .font-dropdown.open .font-options {
+    display: block;
+  }
+  
+  .font-options button {
+    display: block;
+    margin: 2px 0;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-family: inherit;
+    border-radius: 8px;
+    border: none;
+    background-color: white;
+    transition: background 0.2s ease;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .font-options button:hover{
+    background-color: #f0f0f0;
+  }
+  
+
+
+@media (max-width: 768px) {
+    #paper {
+        padding: 25px;
+    }
+
+    .toolbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

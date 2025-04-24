@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vizu</title>
+    <link rel="stylesheet" href="vizu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="toolbar">
+        <img src="Bold.svg" data-cmd="bold">
+        <img src="Italic.svg" data-cmd="italic">
+        <img src="Underline.svg" data-cmd="underline">
+        <img id="heading" src="Heading.svg" data-cmd="heading">
+        <img id="colortext" src="Colortext.svg"><input type="color" id="colorPicker" style="display: none;">
+        <img id="fill" src="fill.svg"><input type="color" id="colorPicker2" style="display: none;">
+        <img id="list" src="List.svg">
+        <div class="align-dropdown">
+            <img id="align-toggle" src="Align.svg" alt="Align">
+            <div class="align-options">
+                <img src="Left.svg" data-cmd="justifyLeft">
+                <img src="Centerr.svg" data-cmd="justifyCenter">
+                <img src="Right.svg" data-cmd="justifyRight">
+                <img src="Full.svg" data-cmd="justifyFull">
+            </div>
+
+        </div>
+        <div class="font-dropdown">
+            <img id="font-toggle" src="font.svg" alt="Font">
+            <div class="font-options">
+                <button data-cmd="fontName" data-value="Arial">Arial</button>
+                <button data-cmd="fontName" data-value="Georgia">Georgia</button>
+                <button data-cmd="fontName" data-value="Courier New">Courier</button>
+                <button data-cmd="Verdana" data-value="Verdana">Verdana</button>
+            </div>
+        </div>
+        <img id="undo" src="Undo.svg" data-cmd="undo">
+        <img id="redo" src="Redo.svg" data-cmd="redo">
+
+
+
+        <img id="saveLocal" src="Download.svg">
+        <img id="save" src="Save.svg">
+    </div>
+
+
+    <div id="paper" contenteditable="true">
+
+    </div>
+
+
+
+    <script src="vizu.js"></script>
+
+</body>
+
+</html>
